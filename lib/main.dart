@@ -10,6 +10,7 @@ import 'helper/colors.dart';
 
 void main() {
   // hello world
+  // hello shorook
   runApp(
     EasyLocalization(
       path: 'assets/langs',
