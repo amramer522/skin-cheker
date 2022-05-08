@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:skin_checker/gen/fonts.gen.dart';
 import 'package:skin_checker/screens/shared/after_splash/view.dart';
@@ -41,6 +42,11 @@ class MyApp extends StatelessWidget {
         platform: TargetPlatform.iOS,
         bottomAppBarColor: Colors.red,
         scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+            systemOverlayStyle: SystemUiOverlayStyle(
+              statusBarColor: Color(0xff01B4D2),
+            )
+        ),
         bottomNavigationBarTheme:
             const BottomNavigationBarThemeData(backgroundColor: Colors.yellow),
         inputDecorationTheme: const InputDecorationTheme(
@@ -58,6 +64,12 @@ class MyApp extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12.r))),
         ),
       ),
+      builder: (context, widget) {
+        return MediaQuery(
+          data: MediaQuery.of(context).copyWith(textScaleFactor: .90),
+          child: widget!,
+        );
+      },
       home: const AfterSplash(),
     );
   }
