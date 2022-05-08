@@ -12,6 +12,7 @@ void main() {
   // hello world
   // hello shorook
   // hi amr
+  // hi nevien
   runApp(
     EasyLocalization(
       path: 'assets/langs',
