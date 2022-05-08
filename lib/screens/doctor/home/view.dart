@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
   var pages = [
     const HomePage(),
     const ChatPage(),
-    const UploadImagePage(),
+     UploadImagePage(),
     const AppointmentsPage(),
     const ProfilePage(),
   ];

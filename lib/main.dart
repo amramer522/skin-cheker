@@ -7,18 +7,17 @@ import 'package:skin_checker/screens/shared/after_splash/view.dart';
 
 import 'generated/codegen_loader.g.dart';
 import 'helper/colors.dart';
+import 'screens/doctor/home/pages/upload_image/view.dart';
+import 'screens/shared/splash/view.dart';
 
 void main() {
-  // hello world
-  // hello shorook
-  // hi amr
   runApp(
     EasyLocalization(
       path: 'assets/langs',
-      startLocale: const Locale('en', 'US'),
-      fallbackLocale: const Locale('en', 'US'),
+      startLocale: const Locale('en'),
+      fallbackLocale: const Locale('en'),
       saveLocale: true,
-      supportedLocales: const [Locale('ar', 'SA'), Locale('en', 'US')],
+      supportedLocales: const [Locale('ar'), Locale('en')],
       assetLoader: const CodegenLoader(),
       child: ScreenUtilInit(
         builder: (context) => const MyApp(),
@@ -72,7 +71,7 @@ class MyApp extends StatelessWidget {
           child: widget!,
         );
       },
-      home: const AfterSplash(),
+      home:  AfterSplash(),
     );
   }
 }

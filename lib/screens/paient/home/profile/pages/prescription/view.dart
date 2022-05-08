@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:skin_checker/generated/locale_keys.g.dart';
 import 'package:skin_checker/helper/helper_methods.dart';
-import 'package:skin_checker/screens/paient/home/home/profile/pages/prescription/pages/upload_file/view.dart';
 import 'package:skin_checker/widgets/app_bars/home_app_bar.dart';
 
 import '../../../../../../../widgets/items/item_prescription.dart';
+import 'pages/upload_file/view.dart';
 
 class PrescriptionScreen extends StatelessWidget {
   const PrescriptionScreen({Key? key}) : super(key: key);

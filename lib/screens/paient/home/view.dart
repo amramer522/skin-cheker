@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:skin_checker/screens/doctor/home/pages/appointments/view.dart';
 import 'package:skin_checker/screens/doctor/home/pages/upload_image/view.dart';
-import 'package:skin_checker/screens/paient/home/home/profile/view.dart';
 
 import '../../../gen/assets.gen.dart';
 import '../../../widgets/items/item_bottom.dart';
 import '../../doctor/home/pages/chat/view.dart';
 import 'home/view.dart';
+import 'profile/view.dart';
 
 class PatientHomeScreen extends StatefulWidget {
   const PatientHomeScreen({Key? key}) : super(key: key);
@@ -21,7 +21,7 @@ class _PatientHomeScreenState extends State<PatientHomeScreen> {
   var pages = [
     const PatientHomePage(),
     const ChatPage(),
-    const UploadImagePage(),
+     UploadImagePage(),
     const AppointmentsPage(),
     const PatientProfilePage(),
   ];

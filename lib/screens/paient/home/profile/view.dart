@@ -5,7 +5,6 @@ import 'package:skin_checker/gen/assets.gen.dart';
 import 'package:skin_checker/gen/fonts.gen.dart';
 import 'package:skin_checker/generated/locale_keys.g.dart';
 import 'package:skin_checker/helper/fake_data.dart';
-import 'package:skin_checker/screens/paient/home/home/profile/pages/test_results/view.dart';
 import 'package:skin_checker/widgets/app_bars/home_app_bar.dart';
 import 'package:skin_checker/widgets/items/item_profile.dart';
 
@@ -13,6 +12,7 @@ import 'pages/community/view.dart';
 import 'pages/medical_records/view.dart';
 import 'pages/my_information/view.dart';
 import 'pages/prescription/view.dart';
+import 'pages/test_results/view.dart';
 
 class PatientProfilePage extends StatefulWidget {
   const PatientProfilePage({Key? key}) : super(key: key);

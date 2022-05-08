@@ -189,11 +189,11 @@ class $AssetsImagesGen {
 class $AssetsLangsGen {
   const $AssetsLangsGen();
 
-  /// File path: assets/langs/ar-SA.json
-  String get arSA => 'assets/langs/ar-SA.json';
+  /// File path: assets/langs/ar.json
+  String get arSA => 'assets/langs/ar.json';
 
-  /// File path: assets/langs/en-US.json
-  String get enUS => 'assets/langs/en-US.json';
+  /// File path: assets/langs/en.json
+  String get enUS => 'assets/langs/en.json';
 }
 
 class Assets {
