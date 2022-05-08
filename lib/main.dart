@@ -8,6 +8,7 @@ import 'generated/codegen_loader.g.dart';
 import 'helper/colors.dart';
 
 void main() {
+  // hello world
   runApp(
     EasyLocalization(
       path: 'assets/langs',
