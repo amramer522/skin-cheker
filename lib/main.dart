@@ -11,6 +11,7 @@ import 'helper/colors.dart';
 void main() {
   // hello world
   // hello shorook
+  // hi amr
   runApp(
     EasyLocalization(
       path: 'assets/langs',
