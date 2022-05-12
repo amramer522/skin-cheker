@@ -99,9 +99,6 @@ class ItemDoctor extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 3.h,
-                ),
                 Text.rich(
                   TextSpan(
                     style: TextStyle(

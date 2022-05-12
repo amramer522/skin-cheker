@@ -10,7 +10,7 @@ class ItemPharmacy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // height: 164.h,
+      height: 164.h,
       margin: EdgeInsets.only(
         top: 10.h,
       ),
@@ -21,12 +21,13 @@ class ItemPharmacy extends StatelessWidget {
           color: const Color(0xffECECEC)),
       child: Column(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(5.r),
-            child: Image.network(
-              "https://sellermarket.ru/uploads/thumbs/news/800x353_cropped_1c2942500eee596514f958959139f02c.jpg",
-              height: 104.h,
-              fit: BoxFit.fill,
+          Expanded(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(5.r),
+              child: Image.network(
+                "https://sellermarket.ru/uploads/thumbs/news/800x353_cropped_1c2942500eee596514f958959139f02c.jpg",
+                fit: BoxFit.fill,
+              ),
             ),
           ),
           SizedBox(
@@ -53,7 +54,8 @@ class ItemPharmacy extends StatelessWidget {
                           color: Colors.black.withOpacity(.55)))
                 ],
               )),
-              const Spacer(),
+              SizedBox(width: 20,),
+              // const Spacer(),
               RatingBar.builder(
                 itemSize: 10.w,
                 ignoreGestures: true,
