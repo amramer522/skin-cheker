@@ -20,6 +20,7 @@ void main() {
       supportedLocales: const [Locale('ar'), Locale('en')],
       assetLoader: const CodegenLoader(),
       child: ScreenUtilInit(
+        designSize: const Size(375, 812),
         builder: (context) => const MyApp(),
       ),
     ),
@@ -71,7 +72,7 @@ class MyApp extends StatelessWidget {
           child: widget!,
         );
       },
-      home:  AfterSplash(),
+      home:  SplashScreen(),
     );
   }
 }
