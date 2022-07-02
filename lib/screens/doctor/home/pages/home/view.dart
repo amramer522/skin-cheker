@@ -75,34 +75,37 @@ class HomePage extends StatelessWidget {
                       fontSize: 18.sp,
                       fontFamily: FontFamily.bold,
                       color: Colors.black)),
+              // 111patient circles
               SizedBox(
                 height: 90.h,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
-                  itemBuilder: (context, index) => const ItemPatients(),
+                  itemBuilder: (context, index) =>  ItemPatients(index),
                   // shrinkWrap: true,
-                  itemCount: 10,
+                  itemCount:8,
                   separatorBuilder:(context, index) => SizedBox(width: 10.w,),
                 ),
               ),
+              // 22222appointment
               Text(LocaleKeys.TodayAppointments.tr(),
                   style: TextStyle(
                       fontSize: 18.sp,
                       fontFamily: FontFamily.bold,
                       color: Colors.black)),
               SizedBox(
-                height: 150.h,
+                height: 180.h,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
-                  itemBuilder: (context, index) => const ItemAppointment(),
+                  itemBuilder: (context, index) =>  ItemAppointment(index),
                   // shrinkWrap: true,
-                  itemCount: 10,
-                  separatorBuilder:(context, index) => SizedBox(width: 10.w,),
+                  itemCount: 8,
+                  separatorBuilder:(context, index) => SizedBox(width: 7.w,),
                 ),
               ),
-              SizedBox(height: 10.h,),
+              SizedBox(height: 20.h,),
+              //333333 articles
               Text(LocaleKeys.Articles.tr(),
                   style: TextStyle(
                       fontSize: 18.sp,
@@ -113,9 +116,9 @@ class HomePage extends StatelessWidget {
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
-                  itemBuilder: (context, index) => const ItemArticles(),
-                  // shrinkWrap: true,
-                  itemCount: 10,
+                  itemBuilder: (context, index) =>  ItemArticles(index),
+                  //  shrinkWrap: true,
+                  itemCount: 6,
                   separatorBuilder:(context, index) => SizedBox(width: 10.w,),
                 ),
               ),

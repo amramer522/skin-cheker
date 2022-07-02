@@ -55,7 +55,7 @@ class NearByDoctorsScreen extends StatelessWidget {
                 SizedBox(width: 5.w,),
                 Container(
                   height: 40.h,
-                  width: 32.w,
+                  width: 70.w,
                   padding: EdgeInsets.all(6.r),
                   child: Image.asset(Assets.icons.filter.path),
                   decoration: BoxDecoration(
@@ -68,7 +68,7 @@ class NearByDoctorsScreen extends StatelessWidget {
                 child: ListView.builder(
                   padding: EdgeInsets.only(bottom: 20.h),
                   shrinkWrap: true,
-              itemBuilder: (context, index) => const ItemDoctor(),
+              itemBuilder: (context, index) =>  ItemDoctor(index),
               itemCount: 10,
             ))
           ],

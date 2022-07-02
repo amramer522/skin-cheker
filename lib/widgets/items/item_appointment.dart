@@ -8,10 +8,97 @@ import 'package:skin_checker/helper/fake_data.dart';
 import 'package:skin_checker/helper/helper_methods.dart';
 
 import '../../screens/doctor/home/pages/chat/chatting/view.dart';
+class UserModel{
+  final int id;
+  final String name;
+  final String backgroundimage;
+  final String location;
+  final String  tel ;
+  final String date;
 
+  UserModel({
+    required this.id,
+    required this.name,
+    required this.backgroundimage,
+    required this.location,
+    required this.tel,
+    required this.date,
+
+
+  });
+}
 class ItemAppointment extends StatelessWidget {
-  const ItemAppointment({Key? key}) : super(key: key);
+  static List<UserModel> users =[
 
+    UserModel(
+      id: 0,
+      name: 'Mohamed Ahmed ',
+      backgroundimage:'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg',
+      date:'20/ feb /2022',
+      tel: '0123456770',
+      location: 'Hay-Elgamaa',
+
+    ),
+    UserModel(
+      id:1 ,
+      name: 'Mohamed Ahmed ',
+      backgroundimage:'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      date:'20/ feb /2022',
+      tel: '0123456770',
+      location: 'ELstad',
+    ),
+    UserModel(
+      id: 2,
+      name: 'Mohamed Ashraf ',
+      backgroundimage: 'https://images.pexels.com/photos/3152227/pexels-photo-3152227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      date:'21/ feb /2022',
+      tel: '0123456770',
+      location: 'Sandob',
+    ),
+    UserModel(
+      id: 3,
+      name: 'Ahmed ali ',
+      backgroundimage: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      date:'22/ feb /2022',
+      tel: '0123456770',
+      location: 'Gedela',
+    ),
+    UserModel(
+      id: 4,
+      name: 'Mahamoud Ahmed ',
+      backgroundimage:'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg',
+      date:'23/ feb /2022',
+      tel:'0123456770',
+      location: 'Torial',
+
+    ),
+    UserModel(
+      id:5 ,
+      name: 'Mohamed helal ',
+      backgroundimage:'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      date:'23/ feb /2022',
+      tel: '0123456770',
+      location: 'Jehan',
+    ),
+    UserModel(
+      id: 6,
+      name: ' Ashraf reda ',
+      backgroundimage: 'https://images.pexels.com/photos/5917850/pexels-photo-5917850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      date:'24/ feb /2022',
+      tel: '0123456770',
+      location: 'Adab',
+    ),
+    UserModel(
+      id: 7,
+      name: 'ali mahmoud ',
+      backgroundimage: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      date:'26/ feb /2022',
+      tel: '0123456770',
+      location: 'Mansoura',
+    ),
+  ];
+  int x ;
+   ItemAppointment(this.x,{Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -33,7 +120,7 @@ class ItemAppointment extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(5.r),
                     child: Image.network(
-                      FakeData.person,
+                      users[x] .backgroundimage,
                       height: 70.h,
                       width: 70.w,
                       fit: BoxFit.fill,
@@ -51,7 +138,7 @@ class ItemAppointment extends StatelessWidget {
                           color: const Color(0xff878787)),
                       children: [
                         TextSpan(
-                          text: FakeData.name + "\n",
+                          text: users[x].name + "\n",
                           style: TextStyle(
                               fontSize: 18.sp,
                               fontFamily: FontFamily.medium,
@@ -68,7 +155,7 @@ class ItemAppointment extends StatelessWidget {
                           ),
                         )),
                         TextSpan(
-                          text: FakeData.day + " , ",
+                          text: users[x].date+ " , ",
                         ),
                         TextSpan(
                           text: FakeData.time + "\n",
@@ -84,7 +171,7 @@ class ItemAppointment extends StatelessWidget {
                           ),
                         )),
                         TextSpan(
-                          text: FakeData.phone,
+                          text: users[x].tel,
                         ),
                         WidgetSpan(
                             child: Padding(
@@ -97,7 +184,7 @@ class ItemAppointment extends StatelessWidget {
                           ),
                         )),
                         TextSpan(
-                          text: FakeData.place,
+                          text: users[x].location,
                         ),
                       ],
                     ),

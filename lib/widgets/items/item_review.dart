@@ -23,7 +23,7 @@ class ItemReview extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(5.r),
             child: Image.network(
-              FakeData.person,
+              'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg',
               height: 72.h,
               width: 72.w,
               fit: BoxFit.cover,

@@ -57,7 +57,7 @@ class ChatPage extends StatelessWidget {
                 child: ListView.builder(
               padding: EdgeInsets.only(bottom: 60.h),
               shrinkWrap: true,
-              itemBuilder: (context, index) => const ItemChat(),
+              itemBuilder: (context, index) =>  ItemChat(index),
               itemCount: 10,
             ))
           ],

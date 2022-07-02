@@ -90,7 +90,7 @@ class ChattingScreen extends StatelessWidget {
                   child: Column(
                     children: List.generate(
                         10,
-                        (index) => ItemChatting(
+                        (index) => ItemChatting(index,
                               isSender: index.isEven,
                             )),
                   ),

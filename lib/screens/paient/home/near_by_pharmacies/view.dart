@@ -60,7 +60,7 @@ class NearByPharmaciesScreen extends StatelessWidget {
                 ),
                 Container(
                   height: 40.h,
-                  width: 32.w,
+                  width: 25.w,
                   padding: EdgeInsets.all(6.r),
                   child: Image.asset(Assets.icons.filter.path),
                   decoration: BoxDecoration(
@@ -73,7 +73,7 @@ class NearByPharmaciesScreen extends StatelessWidget {
                 child: ListView.builder(
               padding: EdgeInsets.only(bottom: 20.h),
               shrinkWrap: true,
-              itemBuilder: (context, index) => const ItemPharmacy(),
+              itemBuilder: (context, index) =>  ItemPharmacy(index),
               itemCount: 10,
             ))
           ],

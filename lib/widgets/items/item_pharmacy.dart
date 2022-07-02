@@ -3,9 +3,60 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../gen/fonts.gen.dart';
+class UserModel{
+  final int id;
+  final String name;
+  final String backgroundimage;
+  UserModel({
+    required this.id,
+    required this.name,
+    required this.backgroundimage,
+
+  });
+}
 
 class ItemPharmacy extends StatelessWidget {
-  const ItemPharmacy({Key? key}) : super(key: key);
+  static List<UserModel> users =[
+
+    UserModel(
+      id: 0,
+      name: 'Elazaby pharmacy ',
+      backgroundimage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTixAQBGYhIshtNfqfTeqXCOlKKysdbR6h-g&usqp=CAU',
+
+
+    ),
+    UserModel(
+      id:1 ,
+      name: 'Aljawhara Elmotamyza pharmacy ',
+      backgroundimage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq-qSaCo9XwxhecYANAqrFSkzIsjtIWx3Hhw&usqp=CAU',
+
+    ),
+    UserModel(
+      id: 2,
+      name: '19011 ',
+      backgroundimage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDPA1bVYlmjuoAvc_4D2PMVdg1ygl8iSY80A&usqp=CAU',
+    ),
+    UserModel(
+      id: 3,
+      name: 'faysal pharmacy ',
+      backgroundimage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ_nnzuYW0A1bIfl9IWbHZv-ems3qkSL5pEQ&usqp=CAU',
+    ),
+    UserModel(
+      id: 4,
+      name: 'Elazaby jehan ',
+      backgroundimage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTixAQBGYhIshtNfqfTeqXCOlKKysdbR6h-g&usqp=CAU',
+
+
+    ),
+    UserModel(
+      id:5 ,
+      name: 'ELtarshoby',
+      backgroundimage:'https://hotlines.tel/assets/imgs/hotlinesimgs/19121.jpg',
+
+    ),
+  ];
+  int x;
+   ItemPharmacy(this.x,{Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +76,7 @@ class ItemPharmacy extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(5.r),
               child: Image.network(
-                "https://sellermarket.ru/uploads/thumbs/news/800x353_cropped_1c2942500eee596514f958959139f02c.jpg",
+                users[x].backgroundimage,
                 fit: BoxFit.fill,
               ),
             ),
@@ -39,7 +90,7 @@ class ItemPharmacy extends StatelessWidget {
               Text.rich(TextSpan(
                 children: [
                   TextSpan(
-                    text: 'DR/Mohamed Pharmacy\n',
+                    text: users[x].name,
                     style: TextStyle(
                         fontSize: 18.sp,
                         height: 1.5.h,

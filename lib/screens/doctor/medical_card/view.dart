@@ -37,7 +37,7 @@ class MedicalCardScreen extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(5.r),
                       child: Image.network(
-                        FakeData.person,
+                        'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg',
                         height: 64.h,
                         width: 64.w,
                         fit: BoxFit.fill,

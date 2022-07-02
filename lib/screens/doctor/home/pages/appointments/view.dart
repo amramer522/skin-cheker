@@ -32,7 +32,7 @@ class AppointmentsPage extends StatelessWidget {
                   labelStyle: TextStyle(
                       fontSize: 14.sp,
                       fontFamily: FontFamily.bold,
-                      height: 1.4),
+                      height: 2.0),
                   tabs: [
                     Tab(
                       text: LocaleKeys.Current.tr(),
@@ -51,13 +51,13 @@ class AppointmentsPage extends StatelessWidget {
                   children: [
                     ListView.builder(
                         padding: EdgeInsets.only(bottom: 60.h),
-                        itemBuilder: (context, index) => const ItemAppointment(),
-                        itemCount: 10),
+                        itemBuilder: (context, index) =>  ItemAppointment(index),
+                        itemCount: 8),
                     ListView.builder(
                         padding: EdgeInsets.only(bottom: 60.h),
 
-                        itemBuilder: (context, index) => const ItemAppointment(),
-                        itemCount: 10),
+                        itemBuilder: (context, index) =>  ItemAppointment(index),
+                        itemCount: 8),
                   ],
                 ),
               )

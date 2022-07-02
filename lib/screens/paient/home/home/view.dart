@@ -208,7 +208,7 @@ class PatientHomePage extends StatelessWidget {
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
-                  itemBuilder: (context, index) => const ItemDoctor(),
+                  itemBuilder: (context, index) =>  ItemDoctor(index),
                   // shrinkWrap: true,
                   itemCount: 10,
                   separatorBuilder: (context, index) => SizedBox(
@@ -244,7 +244,7 @@ class PatientHomePage extends StatelessWidget {
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
-                  itemBuilder: (context, index) => const ItemPharmacy(),
+                  itemBuilder: (context, index) => ItemPharmacy(index),
                   // shrinkWrap: true,
                   itemCount: 10,
                   separatorBuilder: (context, index) => SizedBox(
